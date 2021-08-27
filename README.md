@@ -9,7 +9,6 @@ I wrote this tool with a few goals in mind:
 * It needs to be able to handle directories and files. I found out with my first script that it would fail on individual tf files but if I zipped them up into an archive then it would be successful. Knowing this, I wrote part of the code to zip the directory if a directory was specified. 
 * I needed to be able to have a presales engineer have enough flags to showcase the tags and the CI Integrations without having to set up specific CI workflows. 
 * I also needed it to be more secure so it could be used with multiple customers. (You don't need to assign the variables in the script)
-* I wanted to ensure it was as entertaining as could be for a presentation at the terminal. Hence the cowsay. 
 
 NOTE: Last confirmed working July 6th, 2021 at 5:50 PM EDT. Please ensure the copy you downloaded is after this date. 
 
@@ -28,7 +27,6 @@ Add it to your `.gitignore` (if using git) file and `chmod 700 pcee_iac_scan_too
 ## Quick Start
 
 * Step 1: Install jq `sudo apt-get install jq`
-* Step 2: Install cowsay `sudo apt install cowsay`
 * Step 3: `git clone https://github.com/Kyle9021/pcee_iac_demo_scanning_tool_rev2`
 * Step 3: `cd pcee_iac_demo_scanning_tool_rev2`
 * Step 4: (Optional) `nano pcee_iac_scan_tool.sh` and fill in the variables with the correct data from your console.
