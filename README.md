@@ -1,6 +1,5 @@
 # Prisma Cloud Enterprise Edition IaC Scanning Tool
 
-[![CodeFactor](https://www.codefactor.io/repository/github/kyle9021/pcee_iac_demo_scanning_tool_rev2/badge/main)](https://www.codefactor.io/repository/github/kyle9021/pcee_iac_demo_scanning_tool_rev2/overview/main)
 
 ## Quick Overview: 
 
