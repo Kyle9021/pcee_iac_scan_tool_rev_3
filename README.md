@@ -5,7 +5,7 @@
 
 I wrote this tool with a few goals in mind:
 
-* Tool should be easy to use with robust debugging. 
+* Tool shouldn't be noisy!
 * It needs to be able to handle directories and files. I found out with my first script that it would fail on individual tf files but if I zipped them up into an archive then it would be successful. Knowing this, I wrote part of the code to zip the directory if a directory was specified. 
 * I needed to be able to have a presales engineer have enough flags to showcase the tags and the CI Integrations without having to set up specific CI workflows. 
 * I also needed it to be more secure so it could be used with multiple customers. (You don't need to assign the variables in the script)
