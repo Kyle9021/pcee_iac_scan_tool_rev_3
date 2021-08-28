@@ -424,7 +424,7 @@ echo "$(printf %s "${pcee_iac_results}" | jq '.meta.matchedPoliciesSummary.low')
 echo
 echo 
 echo
-echo "${pcee_iac_results}" | jq '.data[].attributes'
+echo "${pcee_iac_results}" | jq '.data[].attributes' | jq 'sort_by(.severity)'
 echo
 echo
 echo
