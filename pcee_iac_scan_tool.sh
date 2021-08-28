@@ -420,7 +420,16 @@ echo "$(printf %s "${pcee_iac_results}" | jq '.meta.matchedPoliciesSummary.high'
 echo "$(printf %s "${pcee_iac_results}" | jq '.meta.matchedPoliciesSummary.medium') medium severity issue(s) found"
 echo "$(printf %s "${pcee_iac_results}" | jq '.meta.matchedPoliciesSummary.low') low severity issue(s) found"
 
-printf '%s\n' "File,Severity_Level,Rule,Issue,Pan_Link,Description,IaC_Resource_Path,IaC_Code_Line" > "./iac_scan_results_$pcee_scan_date.csv";
+
+echo
+echo 
+echo
+echo "${pcee_iac_results}" | jq '.data[].attributes'
+echo
+echo
+echo
+printf '%s\n' "File,Severity_Level,RQL_Query,Issue,Pan_Link,Description,IaC_Resource_Path,IaC_Code_Line" > "./iac_scan_results_$pcee_scan_date.csv";
+
 
 printf '\n%s\n' "${pcee_iac_results}" | jq '[.data[] | {issue: .attributes.name, severity: .attributes.severity, rule: .attributes.rule, description: .attributes.desc, pan_link: .attributes.docUrl, file: .attributes.blameList[].file, path: .attributes.blameList[].locations[].path, line: .attributes.blameList[].locations[].line}]' | jq 'group_by(.file)[] | {(.[0].file): [.[] | {file: .file, severity: .severity, rule: .rule, issue: .issue, pan_link: .pan_link, description: .description, tf_resource_path: .path, tf_file_line: .line }]}' | jq '.[]' |jq -r 'map({file,severity,rule,issue,pan_link,description,tf_resource_path,tf_file_line}) | (first | keys_unsorted) as $keys | map([to_entries[] | .value]) as $rows | $rows[] | @csv' >>  "./iac_scan_results_$pcee_scan_date.csv";
 echo
