@@ -166,7 +166,7 @@ fi
 # Checks to ensure that the template type has been specified and assigned to the variable.
 if [ -z "${pcee_template_type}" ]; then
         echo;
-        echo -e "Template type not specified; it should be tf, cft, or k8. Try adding \"-h\" to review documentation" ;
+        echo -e "Template type not specified; it should be tf, cft, or k8s. Try adding \"-h\" to review documentation" ;
         echo;
         exit;
 fi
