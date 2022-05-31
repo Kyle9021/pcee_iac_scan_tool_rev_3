@@ -1,7 +1,7 @@
 #!/bin/bash
 #------------------------------------------------------------------------------------------------------------------#
 # Written By Kyle Butler
-# Tested on 7.6.2021 on prisma_cloud_enterprise_edition using Ubuntu 20.04
+# DEPRICATED FUNCTIONALITY AND ENDPOINT LEAVING FOR REFERENCE
 #
 # REQUIREMENTS: 
 # Requires jq to be installed: 'sudo apt-get install jq'
@@ -259,7 +259,7 @@ if [ ! -n "$pcee_console_api_url" ] || [ ! -n "$pcee_secretkey" ] || [ ! -n "$pc
   read -r -s pcee_secretkey; # read -s so that information isn't writen to the bash history
 fi
 
-if [[ ! $pcee_console_api_url =~ ^(\"\')?https\:\/\/api[2-3]?\.prismacloud\.io(\"|\')?$ ]]; then
+if [[ ! $pcee_console_api_url =~ ^(\"|\')?https\:\/\/api[2-3]?\.prismacloud\.io(\"|\')?$ ]]; then
   echo "pcee_console_api_url variable isn't formatted or assigned correctly; it should look like: https://api.prismacloud.io";
   exit;
 fi
