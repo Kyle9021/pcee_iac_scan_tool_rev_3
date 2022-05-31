@@ -1,4 +1,4 @@
-# Prisma Cloud Enterprise Edition IaC Scanning Tool
+# Prisma Cloud Enterprise Edition IaC Scanning Tool - DEPRICATED FUNCTIONALITY - LEAVING UP FOR REFERENCE
 [![CodeFactor](https://www.codefactor.io/repository/github/kyle9021/pcee_iac_scan_tool_rev_3/badge)](https://www.codefactor.io/repository/github/kyle9021/pcee_iac_scan_tool_rev_3)
 
 ## Quick Overview: 
